@@ -1,6 +1,7 @@
 import os
 import socket
 import platform
+import getpass
 from colorama import init, Fore, Style
 
 def main():
@@ -14,7 +15,7 @@ def get_system_info():
     Returns a tuple containing these values.
     """
     hostname = socket.gethostname()
-    username = os.getlogin()
+    username = getpass.getuser()
     os_name = platform.system()
     return hostname, username, os_name
 

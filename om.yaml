@@ -1,0 +1,23 @@
+ci:
+  default:
+    python-nix-template:
+      dir: .
+
+health:
+  default:
+    nix-version:
+      supported: ">=2.16.0"
+    direnv:
+      required: false
+develop:
+  default:
+    readme: |
+      🍾 Welcome to the **python-nix-template** project
+
+      To run,
+
+      ```sh-session
+      nix run
+      ```
+
+      🍎🍎 TODO:  Run 'just' to see more commands. And IDE setup?

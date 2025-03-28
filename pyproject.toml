@@ -1,0 +1,21 @@
+[project]
+name = "python-nix-template"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "colorama>=0.4.6",  # Dependency for colored text
+]
+
+[project.scripts]
+pnt = "python_nix_template:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.6.7",
+]

@@ -94,7 +94,10 @@
           # This example provides two different modes of development:
           # - Impurely using uv to manage virtual environments
           # - Pure development using uv2nix to manage virtual environments
-          devShells = {
+          devShells = rec {
+            # Use pure devShell by default
+            default = uv2nix;
+
             # It is of course perfectly OK to keep using an impure virtualenv workflow and only use uv2nix to build packages.
             # This devShell simply adds Python and undoes the dependency leakage done by Nixpkgs Python infrastructure.
             impure = pkgs.mkShell {
@@ -181,6 +184,12 @@
                 packages = [
                   virtualenv
                   pkgs.uv
+                  pkgs.python312Packages.python-lsp-server
+                  pkgs.pyright
+                  pkgs.python312Packages.python-lsp-ruff
+                  pkgs.nil
+                  pkgs.nixpkgs-fmt
+                  pkgs.just
                 ];
 
                 env = {

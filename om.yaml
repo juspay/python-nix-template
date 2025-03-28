@@ -20,4 +20,4 @@ develop:
       nix run
       ```
 
-      🍎🍎 TODO:  Run 'just' to see more commands. And IDE setup?
+      🍎🍎 Run 'just' to see more commands. TODO: IDE setup?

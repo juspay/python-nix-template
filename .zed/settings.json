@@ -1,0 +1,38 @@
+// Folder-specific settings
+//
+// For a full list of overridable settings, and general information on folder-specific settings,
+// see the documentation: https://zed.dev/docs/configuring-zed#settings-files
+{
+  "languages": {
+    "Python": {
+      "tab_size": 4,
+      "formatter": "language_server",
+      "format_on_save": "on",
+      // "interpreter": "python3",
+      "language_servers": ["pylsp", "pyright"]
+    },
+    "Nix": {
+      "formatter": {
+        "external": {
+          "command": "nixpkgs-fmt"
+        }
+      },
+      "format_on_save": "on",
+      "language_servers": ["nil", "!nixd"]
+    }
+  },
+  "lsp": {
+    "pylsp": {
+      "binary": { "path_lookup": true },
+      "settings": {
+        "plugins": {
+          "ruff": {
+            "enabled": true,
+            "formatEnabled": true,
+            "targetVersion": "py311"
+          }
+        }
+      }
+    }
+  }
+}

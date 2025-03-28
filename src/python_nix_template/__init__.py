@@ -1,13 +1,14 @@
-import os
 import socket
 import platform
 import getpass
 from colorama import init, Fore, Style
 
+
 def main():
     # Initialize colorama for cross-platform compatibility
     init()
     print_colored_info()
+
 
 def get_system_info():
     """
@@ -28,7 +29,7 @@ def print_colored_info():
     """
     # Get system information
     hostname, username, os_name = get_system_info()
-    
+
     # Print each piece of information in a distinct color
     print(f"Hostname: {Fore.RED}{hostname}{Style.RESET_ALL}")
     print(f"Username: {Fore.GREEN}{username}{Style.RESET_ALL}")

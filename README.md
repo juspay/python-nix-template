@@ -1,6 +1,6 @@
 # python-nix-template
 
-WIP: A simple Nix project template for Python projects
+WIP: A simple Nix project template for Python projects. See https://github.com/juspay/python-nix-template/issues/2 for what's left to do before making this ready for public consumption.
 
 ## Details
 
